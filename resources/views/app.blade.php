@@ -47,7 +47,8 @@
                             <h5 class="uppercase font-bold mb-6 text-lg">Stats</h5>
 
                             <ul>
-                                <li><router-link to="/stats">Site Stats</router-link></li>
+                                <li class="mb-6"><router-link to="/stats">Site Stats</router-link></li>
+                                <li><router-link to="/achievements">Your achievements</router-link></li>
                             </ul>
                         </section>
                     </aside>

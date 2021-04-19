@@ -7,6 +7,7 @@ import Typography from './components/Typography';
 import Wallpapers from './components/Wallpapers';
 import NotFound from './components/NotFound';
 import Stats from './components/Stats';
+import Achievements from './components/Achievements';
 
 
 let Loaders = () => import('./components/Loaders');
@@ -68,5 +69,9 @@ export default {
             component: Stats
         },
 
+        {
+            path: '/achievements',
+            component: Achievements
+        },
     ]
 };
