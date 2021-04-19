@@ -32,7 +32,7 @@
                             </ul>
                         </section>
 
-                        <section class="mt-20">
+                        <section class="mt-12">
                             <h5 class="uppercase font-bold mb-6 text-lg">Doodles</h5>
 
                             <ul>
