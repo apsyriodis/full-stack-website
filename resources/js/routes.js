@@ -2,11 +2,12 @@ import Logo from './components/Logo';
 import LogoSymbol from './components/LogoSymbol';
 import Colors from './components/Colors';
 import Illustrations from './components/Illustrations';
-import Loaders from './components/Loaders';
 import Mascot from './components/Mascot';
 import Typography from './components/Typography';
 import Wallpapers from './components/Wallpapers';
 import NotFound from './components/NotFound';
+
+let Loaders = () => import('./components/Loaders');
 
 
 export default {
