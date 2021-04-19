@@ -11,13 +11,6 @@ Document
 Use a better box model (opinionated).
 */
 
-.classic{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transofrm: translate('-50%, -50%');
-}
-
 *,
 *::before,
 *::after {
