@@ -9,17 +9,17 @@
 
         <title>Laracasts Assets</title>
     </head>
-    <body>
-        <div id="app">
-            <div class="container mx-auto">
-                <header class="pt-10 mb-16">
+    <body style="font-family: 'Open Sans', sans-serif; max-width: 1600px">
+        <div id="app" >
+            <div class="container px-8 ml-11">
+                <header class="pt-9 mb-16">
                     <h1>
                         <router-link to="/"><img src="/images/logo.svg" alt="laracasts"></router-link>
                     </h1>
                 </header>
 
                 <main class="flex">
-                    <aside class="w-1/5 whitespace-nowrap mr-32">
+                    <aside class="w-1/5 whitespace-nowrap lg:mt-8 ml-1">
                         <section class="mb-6">
                             <h5 class="uppercase font-bold text-lg mb-6">The Brand</h5>
 
@@ -44,7 +44,7 @@
                         </section>
                     </aside>
 
-                    <div class="primary flex-1">
+                    <div class="primary flex-1 ml-10">
                         <router-view></router-view>
                     </div>
                 </main>

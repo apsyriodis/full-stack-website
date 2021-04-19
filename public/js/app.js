@@ -70,6 +70,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -968,9 +1008,123 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", { staticClass: "text-4xl" }, [_vm._v("Full Logo")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "h1",
+        {
+          staticClass:
+            "text-4xl mb-4 -ml-1 flex items-center justify-center uppercase"
+        },
+        [_vm._v("\n        Full Logo\n    ")]
+      ),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "picture",
+          {
+            staticClass:
+              "block shadow flex items-center justify-center mb-6 border border-gray-300",
+            staticStyle: { height: "382px" }
+          },
+          [_c("img", { attrs: { src: "/images/logo.svg", alt: "logo" } })]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex justify-between" }, [
+          _c("p", [
+            _vm._v("Original Logo on "),
+            _c("strong", [_vm._v("white")]),
+            _vm._v(" background")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "border border-gray-300 py-1 px-5 rounded-full bg-gray-100 hover:bg-gray-200",
+              attrs: { href: "/images/logo.svg" }
+            },
+            [_vm._v("logo.svg")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-16" }, [
+        _c(
+          "picture",
+          {
+            staticClass:
+              "bg-blue-800 block shadow flex items-center justify-center mb-6 border border-gray-300",
+            staticStyle: { height: "382px" }
+          },
+          [
+            _c("img", {
+              attrs: { src: "/images/negative-logo.svg", alt: "logo2" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex justify-between" }, [
+          _c("p", [
+            _vm._v("Negative Logo with accent on "),
+            _c("strong", [_vm._v("dark")]),
+            _vm._v(" background")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "border border-gray-300 py-1 px-5 rounded-full bg-gray-100 hover:bg-gray-200",
+              attrs: { href: "/images/negative-logo.svg" }
+            },
+            [_vm._v("negative-logo.svg")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-16 mb-16" }, [
+        _c(
+          "picture",
+          {
+            staticClass:
+              "block shadow flex items-center justify-center mb-6 border border-gray-300 bg-black",
+            staticStyle: { height: "382px" }
+          },
+          [
+            _c("img", {
+              attrs: { src: "/images/pure-negative-logo.svg", alt: "logo3" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex justify-between" }, [
+          _c("p", [
+            _vm._v("Pure negative Logo on "),
+            _c("strong", [_vm._v("dark")]),
+            _vm._v(" background")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "border border-gray-300 py-1 px-5 rounded-full bg-gray-100 hover:bg-gray-200",
+              attrs: { href: "/images/pure-negative-logo.svg" }
+            },
+            [_vm._v("pure-negative-logo.svg")]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
