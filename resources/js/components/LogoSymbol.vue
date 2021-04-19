@@ -1,5 +1,5 @@
 <template>
-    <p>About</p>
+    <h1 class="text-4xl">Logo Symbol</h1>
 </template>
 
 <script>
