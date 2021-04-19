@@ -42,6 +42,14 @@
                                 <li><router-link to="/wallpapers">Wallpapers</router-link></li>
                             </ul>
                         </section>
+
+                        <section class="my-12">
+                            <h5 class="uppercase font-bold mb-6 text-lg">Stats</h5>
+
+                            <ul>
+                                <li><router-link to="/stats">Site Stats</router-link></li>
+                            </ul>
+                        </section>
                     </aside>
 
                     <div class="primary flex-1 ml-10">

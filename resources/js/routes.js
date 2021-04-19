@@ -6,6 +6,8 @@ import Mascot from './components/Mascot';
 import Typography from './components/Typography';
 import Wallpapers from './components/Wallpapers';
 import NotFound from './components/NotFound';
+import Stats from './components/Stats';
+
 
 let Loaders = () => import('./components/Loaders');
 
@@ -59,6 +61,11 @@ export default {
         {
             path: '/wallpapers',
             component: Wallpapers
+        },
+
+        {
+            path: '/stats',
+            component: Stats
         },
 
     ]
