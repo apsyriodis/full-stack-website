@@ -27,7 +27,7 @@ Route::get('stats', function (){
 });
 
 Route::get('achievements', function (){
-    return [
-        'achievements' => 'A','B','C'
-    ];
-});
+    $user = request()->user();
+
+    return $user->achievements;
+})->middleware('auth:api');
