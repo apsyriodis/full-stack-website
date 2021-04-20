@@ -24,13 +24,13 @@ export default {
         }
     },
 
-        created() {
-        axios.get('http://127.0.0.1:8000/api/stats').then(response => {
-            let { data } = response;
+    created() {
+    axios.get('http://127.0.0.1:8000/api/stats').then(response => {
+        let { data } = response;
 
-            this.series = data.series;
-            this.lessons = data.lessons;
-        });
+        this.series = data.series;
+        this.lessons = data.lessons;
+    });
     }
 }
 </script>
