@@ -25,12 +25,12 @@ export default {
     },
 
     created() {
-    axios.get('http://127.0.0.1:8000/api/stats').then(response => {
-        let { data } = response;
-
-        this.series = data.series;
-        this.lessons = data.lessons;
-    });
+        axios.get('http://127.0.0.1:8000/api/stats')
+            .then(response => response.data)
+            .then (data => {
+                this.series = data.series;
+                this.lessons = data.lessons;
+            });
     }
 }
 </script>
