@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-gray-200 rounded-xl">
+    <div class="container bg-gray-200 p-3 rounded-xl">
         <h2 class="text-center p-2 text-white bg-dark rounded-md">Add Contact</h2>
         <div class="card-body">
             <form id="validateForm" @submit.prevent="saveContact" enctype="multipart/form-data" novalidate>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-6 offset-md-3 mb-3">
                     <div class="form-group">
-                        <label class="mb-2 ml-1" for="">Name</label>
+                        <label class="mb-2 mt-2 ml-1" for="">Name</label>
                         <input placeholder="Enter Name" type="text" id="name" v-model="contact.name" class="form-control">
                     </div>
                 </div>
