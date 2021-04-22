@@ -1,32 +1,28 @@
 <template>
-    <div class="container bg-gray-200 rounded-xl">
+    <div class="container bg-gray-200 p-3 rounded-xl">
         <h2 class="text-center p-2 text-white bg-dark rounded-md">Contacts</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Designation</th>
-                    <th scope="col">Contact Number</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody v-for="contact in contacts" :key="contact.id">
-                <tr>
-                    <td scope="row">{{ contact.id }}</td>
-                    <td scope="row">{{ contact.name }}</td>
-                    <td scope="row">{{ contact.email }}</td>
-                    <td scope="row">{{ contact.designation }}</td>
-                    <td scope="row">{{ contact.contact_no }}</td>
-                    <td>
-                        <router-link :to="{ name:'edit_contact', params: {id:contact.id}}" class="btn btn-primary btn-sm">Edit</router-link>
-                        <button class="btn btn-danger btn-sm" v-on:click.prevent="deleteContact(contact.id)">Delete</button>
-                    </td>
 
-                </tr>
-            </tbody>
-        </table>
+        <el-table :data="contacts" style="width: 100%">
+            <el-table-column width="40px" label="#" prop="id"> </el-table-column>
+            <el-table-column width="190px" label="Name" prop="name"> </el-table-column>
+            <el-table-column width="190px" label="Email" prop="email"> </el-table-column>
+            <el-table-column width="190px" label="Designation" prop="designation"> </el-table-column>
+            <el-table-column width="150px" label="Contact Number" prop="contact_no"> </el-table-column>
+
+            <el-table-column align="right">
+                <template slot-scope="props">
+                    <router-link size="mini"  :to="{ name:'edit_contact', params: {id:props.row.id}}" class="btn btn-primary btn-sm">Edit</router-link>
+                    <el-popconfirm 
+                    title="Are you sure to delete this?" 
+                    confirmButtonText="Yes" c
+                    cancelButtonText="Cancel"
+                    @confirm="handleDelete(1,props.row)">
+                        <el-button slot="reference" size="mini" type="danger" class="p-2 btn btn-danger btn-sm">Delete</el-button>
+                    </el-popconfirm>
+                </template>
+            </el-table-column>
+        </el-table>
+
     </div>
 </template>
 
@@ -60,8 +56,10 @@ export default {
             console.log('Contact List Component Mounted');
         },
 
-        deleteContact(id) {
-            let url = `http://127.0.0.1:8000/api/delete_contact/${id}`;
+        handleDelete(index, row) {
+            this.id = row.id;
+
+            let url = `http://127.0.0.1:8000/api/delete_contact/${row.id}`;
             axios.delete(url)
             .then(response => {
                 if(response.status){
@@ -72,15 +70,7 @@ export default {
                     this.$utils.showError('Error!', response.message);
                 }
             });
-
         }
-
-        // data() {
-        //     return {
-        //         url: document.head.querySelector('meta[name="url"]').content,
-        //         contacts:[]
-        //     }
-        // }
     },
 }
 </script>
