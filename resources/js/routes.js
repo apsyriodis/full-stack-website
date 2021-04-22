@@ -1,77 +1,43 @@
-import Logo from './components/Logo';
-import LogoSymbol from './components/LogoSymbol';
-import Colors from './components/Colors';
-import Illustrations from './components/Illustrations';
-import Mascot from './components/Mascot';
-import Typography from './components/Typography';
-import Wallpapers from './components/Wallpapers';
 import NotFound from './components/NotFound';
-import Stats from './components/Stats';
-import Achievements from './components/Achievements';
-
-
-let Loaders = () => import('./components/Loaders');
-
+import Home from './components/Home';
+import ContactList from './components/ContactList';
+import AddContact from './components/AddContact';
+import EditContact from './components/EditContact';
 
 export default {
     mode: 'history',
 
     linkActiveClass: 'font-bold',
 
-    routes: [
+    routes: [       
         {
+            name: '*',
             path: '*',
             component: NotFound
         },
-
-        {
-            path: '/',
-            component: Logo
-        },
-
-        {
-            path: '/logosymbol',
-            component: LogoSymbol
-        },
-
-        {
-            path: '/colors',
-            component: Colors
-        },
         
         {
-            path: '/illustrations',
-            component: Illustrations
+            name: '/',
+            path: '/',
+            component: Home
         },
 
         {
-            path: '/loaders',
-            component: Loaders
+            name: '/contact_list',
+            path: '/contact_list',
+            component: ContactList
         },
 
         {
-            path: '/Mascot',
-            component: Mascot
+            name: '/add_contact',
+            path: '/add_contact',
+            component: AddContact
         },
 
         {
-            path: '/typography',
-            component: Typography
-        },
-
-        {
-            path: '/wallpapers',
-            component: Wallpapers
-        },
-
-        {
-            path: '/stats',
-            component: Stats
-        },
-
-        {
-            path: '/achievements',
-            component: Achievements
+            name: 'edit_contact',
+            path: '/edit_contact/:id?',
+            component: EditContact
         },
     ]
 };

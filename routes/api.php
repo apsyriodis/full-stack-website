@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,16 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('get_contacts', [ContactController::class, 'index'])->name('index');
 
-Route::get('stats', function (){
-    return [
-        'series' => 200,
-        'lessons' => 1300
-    ];
-});
+Route::get('edit_contact/{id}', [ContactController::class, 'edit'])->name('edit');
 
-Route::get('achievements', function (){
-    $user = request()->user();
+Route::post('save_contact', [ContactController::class, 'store'])->name('store');
 
-    return $user->achievements;
-})->middleware('auth:api');
+Route::post('update_contact/{id}', [ContactController::class, 'update'])->name('update');
+
+Route::get('add_contact', [ContactController::class, 'create'])->name('create');
+
+Route::delete('delete_contact/{id}', [ContactController::class, 'destroy'])->name('destroy');
