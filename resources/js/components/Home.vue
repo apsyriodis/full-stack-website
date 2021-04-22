@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-        <h2>Home</h2>
+        <h2 class="mb-6">Home</h2>
 
         <p>In this tutorial, I'll show you how to set up a full-stack Vue with Laravel 8 backend including each of the CRUD operations (Create, Read, Update and Delete). </p>
         

@@ -19,8 +19,10 @@
                     <td scope="row">{{ contact.email }}</td>
                     <td scope="row">{{ contact.designation }}</td>
                     <td scope="row">{{ contact.contact_no }}</td>
-                    <td><router-link :to="{ name:'edit_contact', params: {id:contact.id}}" class="btn btn-primary btn-sm">Edit</router-link></td>
-                    <td><button class="btn btn-danger btn-sm" v-on:click.prevent="deleteContact(contact.id)">Delete</button></td>
+                    <td>
+                        <router-link :to="{ name:'edit_contact', params: {id:contact.id}}" class="btn btn-primary btn-sm">Edit</router-link>
+                        <button class="btn btn-danger btn-sm" v-on:click.prevent="deleteContact(contact.id)">Delete</button>
+                    </td>
 
                 </tr>
             </tbody>

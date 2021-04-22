@@ -2022,6 +2022,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Contact',
   data: function data() {
@@ -27805,26 +27807,24 @@ var render = function() {
                       }
                     },
                     [_vm._v("Edit")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger btn-sm",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return _vm.deleteContact(contact.id)
+                        }
+                      }
+                    },
+                    [_vm._v("Delete")]
                   )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger btn-sm",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.deleteContact(contact.id)
-                      }
-                    }
-                  },
-                  [_vm._v("Delete")]
-                )
-              ])
+              )
             ])
           ])
         })
@@ -28145,7 +28145,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("h2", [_vm._v("Home")]),
+      _c("h2", { staticClass: "mb-6" }, [_vm._v("Home")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
