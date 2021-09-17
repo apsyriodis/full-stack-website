@@ -8,6 +8,12 @@ pipeline {
              }
         }
         
+        stage("pull") {
+            steps {
+                  sh "git pull"
+             }
+        }
+        
         stage("rm") {
             steps {
                   sh "git rm test.index"
