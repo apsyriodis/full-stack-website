@@ -8,15 +8,9 @@ pipeline {
              }
         }
         
-        stage("pull") {
-            steps {
-                  sh "git pull"
-             }
-        }
-        
         stage("rm") {
             steps {
-                  sh "git rm test.index"
+                  sh "git rm README.md"
              }
         }
         
@@ -28,7 +22,7 @@ pipeline {
         
          stage("commit") {
             steps {
-                  sh "git commit -m 'Delete test.index file'"
+                  sh "git commit -m 'Delete README.md file'"
              }
         }
         
