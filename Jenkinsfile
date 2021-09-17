@@ -10,10 +10,10 @@ pipeline {
     }
     post {  
          success {  
-             mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "apsyriodis@gmail.com";  
+             mail bcc: '', body: "Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> Build Status: ${env.BUILD_STATUS} <br> Build URL: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Project ${env.JOB_NAME} -> ${env.BUILD_STATUS}, ", to: "apsyriodis@gmail.com";  
          }  
          failure {  
-             mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "apsyriodis@gmail.com";  
+             mail bcc: '', body: "Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> Build Status: ${env.BUILD_STATUS} <br> Build URL: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Project ${env.JOB_NAME} -> ${env.BUILD_STATUS}, ", to: "apsyriodis@gmail.com";  
          }  
          unstable {  
              echo 'This will run only if the run was marked as unstable'  
