@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage("co") {
+            steps {
+                  sh "git checkout main"
+             }
+        }
+        
         stage("rm") {
             steps {
                   sh "git rm test.index"
