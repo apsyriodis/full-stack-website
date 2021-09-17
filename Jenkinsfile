@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage("co") {
             steps {
-                  sh "git checkout main"
+                  sh "git checkout -b jenkistest"
              }
         }
         
         stage("rm") {
             steps {
-                  sh "git rm README.md"
+                  sh "git rm test.index"
              }
         }
         
@@ -22,13 +22,13 @@ pipeline {
         
          stage("commit") {
             steps {
-                  sh "git commit -m 'Delete README.md file'"
+                  sh "git commit -m 'Deleted test.index file'"
              }
         }
         
           stage("push") {
             steps {
-                  sh "git remote set-url origin git@github.com/apsyriodis/Full-Stack-Website.git"
+                  sh "git push -u origin jenkinstest"
              }
         }
     }
