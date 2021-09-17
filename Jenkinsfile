@@ -34,7 +34,7 @@ pipeline {
         
           stage("push") {
             steps {
-                  sh "git push -u origin main"
+                  sh "git remote set-url origin git@github.com/apsyriodis/Full-Stack-Website.git"
              }
         }
     }
