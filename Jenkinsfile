@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("co") {
             steps {
-                  sh "git checkout -b jenkistest"
+                  sh "git checkout -b jenkinstest"
              }
         }
         
@@ -28,7 +28,7 @@ pipeline {
         
           stage("push") {
             steps {
-                  sh "git push -u origin jenkistest"
+                  sh "git push -u origin jenkinstest"
              }
         }
     }
