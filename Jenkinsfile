@@ -28,7 +28,7 @@ pipeline {
         
           stage("push") {
             steps {
-                  sh "git push -u origin jenkinstest"
+                  sh "git push -u origin jenkistest"
              }
         }
     }
