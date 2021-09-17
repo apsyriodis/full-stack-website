@@ -2,33 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage("co") {
+        stage("serve") {
             steps {
-                  sh "git checkout -b jenkinstest"
-             }
-        }
-        
-        stage("rm") {
-            steps {
-                  sh "git rm test.index"
-             }
-        }
-        
-         stage("add") {
-            steps {
-                  sh "git add ."
-             }
-        }
-        
-         stage("commit") {
-            steps {
-                  sh "git commit -m 'Deleted test.index file'"
-             }
-        }
-        
-          stage("push") {
-            steps {
-                  sh "git push -u origin jenkinstest"
+                  sh "php artisan serve"
              }
         }
     }
